@@ -1,0 +1,10 @@
+package_name: snipsbabycare
+class_name: SnipsBabyCare
+description: Baby Care skill for Snips
+parameters: ["ifttt_key"]
+intents:
+  - intent: Allaitement
+    action: >
+      {%
+      skill.send_allaitement(intent.duree.minutes)
+      %}

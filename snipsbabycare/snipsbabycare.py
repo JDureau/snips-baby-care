@@ -12,12 +12,13 @@ class SnipsBabyCare:
 
         :param ifttt_key: IFTTT Key
         """
+        self.ifttt_key = ifttt_key
 
     def send_allaitement(self, duration=None):
         """ Log an entry for allaitement for [duration] minutes. """
 
-        requests.post('https://maker.ifttt.com/trigger/allaitement/with/key/ff4VTSbWZaeAp6o72bnYgkqHL4JK0zxF_prKTwZRM6p', 
-            data = {"value1":"233m"})
+        requests.post('https://maker.ifttt.com/trigger/breastfeeding/with/key/{0}'.format(self.ifttt_key), 
+            data = {"value1":duration})
 
 
 if __name__ == "__main__":

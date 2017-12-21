@@ -7,7 +7,7 @@ intents:
     action: |
       {%
       snips.skill.send_row("biberon", str(int(snips.intent.volume)) + " ml")
-      snips.dialogue.speak("Ok, {0}".format(snips.intent.volume), snips.session_id)
+      snips.dialogue.speak("Ok, {0}".format(str(int(snips.intent.volume))), snips.session_id)
       %}
   - intent: LogPoop
     action: |
@@ -24,6 +24,17 @@ intents:
   - intent: LogBreastfeeding
     action: |
       {%
-      snips.skill.send_row("couche", "pipi")
+      snips.skill.send_row("tétée", snips.intent.side)
+      snips.skill.log_breast(snips.intent.side)
+      %}
+  - intent: AskLastSide
+    action: |
+      {%
+      snips.dialogue.speak(snips.skill.last_breast(), snips.session_id)
+      %}
+  - intent: AskNextSide
+    action: |
+      {%
+      snips.dialogue.speak(snips.skill.next_breast(), snips.session_id)
       %}
 

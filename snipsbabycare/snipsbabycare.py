@@ -18,7 +18,7 @@ class SnipsBabyCare:
         """ Log an entry for allaitement for [duration] minutes. """
 
         requests.post('https://maker.ifttt.com/trigger/breastfeeding/with/key/{0}'.format(self.ifttt_key), 
-            data = {"value1":duration})
+            data = {"value1": 34})
 
 
 if __name__ == "__main__":

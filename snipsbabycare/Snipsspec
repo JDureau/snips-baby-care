@@ -6,5 +6,5 @@ intents:
   - intent: GetProduct
     action: |
       {%
-      skill.send_allaitement(45)
+      snips.skill.send_allaitement(45)
       %}

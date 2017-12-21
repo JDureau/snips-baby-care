@@ -4,7 +4,7 @@ description: Baby Care skill for Snips
 parameters: ["ifttt_key"]
 intents:
   - intent: GetProduct
-    action: >
+    action: |
       {%
       skill.send_allaitement(45)
       %}

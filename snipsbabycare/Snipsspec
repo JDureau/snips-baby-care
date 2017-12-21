@@ -8,7 +8,7 @@ intents:
       {%
       snips.skill.send_row("biberon", str(int(snips.intent.volume)) + " ml")
       %}
-  - intent: LogPoo
+  - intent: LogPoop
     action: |
       {%
       snips.skill.send_row("couche", "caca")

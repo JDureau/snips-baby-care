@@ -3,8 +3,8 @@ class_name: SnipsBabyCare
 description: Baby Care skill for Snips
 parameters: ["ifttt_key"]
 intents:
-  - intent: GetProduct
+  - intent: LogVolumeDrunk
     action: |
       {%
-      snips.skill.send_allaitement(45)
+      snips.skill.send_row("biberon", snips.intent.volume)
       %}

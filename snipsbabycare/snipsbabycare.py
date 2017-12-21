@@ -14,14 +14,14 @@ class SnipsBabyCare:
         """
         self.ifttt_key = ifttt_key
 
-    def send_allaitement(self, duration=None):
+    def send_row(self, action, value=None):
         """ Log an entry for allaitement for [duration] minutes. """
 
         with open('test.json', 'w') as outfile:
-            json.dump({ "key": self.ifttt_key, "duration": duration }, outfile)
+            json.dump({ "key": self.ifttt_key, "action": action, "value": value }, outfile)
 
         requests.post('https://maker.ifttt.com/trigger/breastfeeding/with/key/{0}'.format(self.ifttt_key), 
-            data = {"value1": "34m"})
+            data = {"value1": action, "value2": value})
 
 
 if __name__ == "__main__":

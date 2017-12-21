@@ -12,7 +12,7 @@ intents:
     action: |
       {%
       snips.skill.send_row("couche", "caca")
-      snips.dialogue.speak(“Caca noté“, snips.session_id)
+      snips.dialogue.speak("Caca noté", snips.session_id)
       %}
   - intent: LogPee
     action: |

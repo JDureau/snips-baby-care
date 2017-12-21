@@ -7,7 +7,7 @@ import requests
 class SnipsBabyCare:
     """ Baby Care skill for Snips. """
 
-    def __init__(self, ifttt_key=None):
+    def __init__(self, ifttt_key=None, locale):
         """ Initialisation.
 
         :param ifttt_key: IFTTT Key

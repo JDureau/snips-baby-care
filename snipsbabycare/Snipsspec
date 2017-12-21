@@ -12,9 +12,16 @@ intents:
     action: |
       {%
       snips.skill.send_row("couche", "caca")
+      snips.dialogue.speak(“Caca noté“, snips.session_id)
       %}
   - intent: LogPee
     action: |
       {%
       snips.skill.send_row("couche", "pipi")
       %}
+  - intent: LogBreastfeeding
+    action: |
+      {%
+      snips.skill.send_row("couche", "pipi")
+      %}
+

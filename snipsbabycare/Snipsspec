@@ -7,6 +7,7 @@ intents:
     action: |
       {%
       snips.skill.send_row("biberon", str(int(snips.intent.volume)) + " ml")
+      snips.dialogue.speak("Ok, {0}".format(snips.intent.volume), snips.session_id)
       %}
   - intent: LogPoop
     action: |
@@ -18,6 +19,7 @@ intents:
     action: |
       {%
       snips.skill.send_row("couche", "pipi")
+      snips.dialogue.speak("Pipi noté", snips.session_id)
       %}
   - intent: LogBreastfeeding
     action: |

@@ -6,5 +6,5 @@ intents:
   - intent: LogVolumeDrunk
     action: |
       {%
-      snips.skill.send_row("biberon", str(snips.intent.volume) + "ml")
+      snips.skill.send_row("biberon", str(int(snips.intent.volume)) + " ml")
       %}

@@ -40,7 +40,7 @@ intents:
   - intent: LogAwakening
     action: |
       {%
-      snips.skill.send_row("sommeil", "reveil force")
+      snips.skill.send_row("sommeil", "réveil forcé")
       snips.dialogue.speak("Reveil noté", snips.session_id)
       %}
 

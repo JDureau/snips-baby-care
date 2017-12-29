@@ -37,4 +37,9 @@ intents:
       {%
       snips.dialogue.speak(snips.skill.next_breast(), snips.session_id)
       %}
+  - intent: LogAwakening
+    action: |
+      {%
+      snips.skill.send_row("sommeil", "réveil forcé")
+      %}
 
